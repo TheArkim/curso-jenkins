@@ -8,6 +8,7 @@ fi
 source venv/bin/activate
 
 echo "instalando dependencias"
+pip install --upgrade pip
 pip install -r requirements.txt
 
 echo "Ejecutando pruebas"
