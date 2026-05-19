@@ -1,20 +1,18 @@
 #!/bin/bash
 
 echo "Activando el entorno virtual"
-if [ !"-d venv" ]; then
+if [ ! -d "venv" ]; then
     python3 -m venv venv
 fi
 
 if [ -f "venv/bin/activate" ]; then
     source venv/bin/activate
 elif [ -f "venv/Scripts/activate" ]; then
-    soruce venv/Scripts/activate
+    source venv/Scripts/activate
 else
     echo "Error: no se pudo activar el entorno virtual"
     exit 1
 fi
-
-source venv/bin/activate
 
 echo "instalando dependencias"
 pip install --upgrade pip --break-system-packages
