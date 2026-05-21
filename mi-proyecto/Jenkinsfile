@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps{
+                sh 'pwd'
+                sh 'ls -la'
                 sh 'mvn -f curso-jenkins/mi-proyecto/pom.xml clean install'
             }
         }
