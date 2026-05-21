@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                sh 'mvn -f mi-proyecto/pom.xml clean install'
+                sh 'mvn -f mi-proyecto/pom.xml -B -Dstyle.color=never clean install'
             }
         }
         stage('Test') {
             steps{
-                sh 'mvn -f mi-proyecto/pom.xml test'
+                sh 'mvn -f mi-proyecto/pom.xml -B -Dstyle.color=never test'
             }
         }
         stage('Deploy') {
