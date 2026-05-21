@@ -19,7 +19,7 @@ pipeline {
     }
     post {
         always {
-            echo "Siempre se ejecutara"
+            echo "Siempre se ejecutara esta seccion"
         }
         success {
             echo "Exito: aca se ejecuta si todo el pipeline fue exitoso"
